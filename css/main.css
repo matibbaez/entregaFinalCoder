@@ -1,0 +1,489 @@
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Caption&display=swap');
+@import url('https://fonts.cdnfonts.com/css/mona-sans?styles=144351');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Mona Sans';
+    scroll-behavior: smooth;
+}
+
+.wrapped .logo {
+    font-family: 'Dela Gothic One', cursive;
+}
+
+.inicio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.25rem 6rem;
+    left: 0;
+    position: fixed;
+    z-index: 100;
+    background-color: white;
+    width: 100%;
+}
+
+.inicio nav ul li{
+    list-style: none;
+    text-decoration: none;
+    flex-wrap: wrap;
+    display: inline;
+    padding: 10px;
+    font-size: 1.15rem;
+}
+
+#intro-viajes {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+.info-container {
+    height: 100vh;
+    background: linear-gradient(rgba(5, 7, 12, 0.75), rgba(5, 7, 12, 0.75)),
+    url(/assets/cancun02.jpg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.info-container h2 {
+    font-size: 3.5rem;
+    font-family: 'Mona Sans';
+    font-weight: bold;
+}
+
+.info-container p {
+    font-size: 1.25rem;
+    padding-top: 5px;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Mona Sans';
+}
+
+#intro-viajes .our-team-section {
+    margin-top: 150px;
+}
+
+.numero-cart {
+    background-color: black;
+    color: white;
+    margin-left: 5px;
+    padding: .15rem .3rem;
+    border-radius: .20rem;
+}
+
+
+/* TEAM */
+
+#our-team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin-top: 10px;
+}
+
+.our-team-intro h2 {
+    margin-top: 170px;
+    font-size: 4rem;
+    font-family: 'Mona Sans';
+    font-weight: bold;
+}
+
+.our-team-info p {
+    margin-top: 15px;
+    font-size: 1.25rem;
+    text-align: center;
+    font-family: 'Mona Sans';
+}
+
+.our-team-section{
+    height: 80%;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 120px;
+    font-family: 'Mona Sans'
+}
+
+.member-container{
+    width: 400px;
+    height: 450px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 12px rgba(160, 160, 160, 0.4);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 80px 2rem 2rem 2rem;
+    box-sizing: border-box;
+}
+
+@media (max-width: 1500px){
+    .member-container{
+        margin-bottom: 10rem;
+    }
+}
+
+.member-container::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 6px;
+    width: 100%;
+    background-color: #202020;
+}
+
+.member-container::after{
+    content: "";
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    position: absolute;
+    top: -100px;
+    background-position: center;
+    background-size: cover;
+}
+
+.member-container:nth-of-type(1)::after{
+    background-image: url(/assets/Perfil1.png);
+}
+.member-container:nth-of-type(2)::after{
+    background-image: url(/assets/IMG_9234.jpg);
+}
+.member-container:nth-of-type(3)::after{
+    background-image: url(/assets/Perfil3.png);
+}
+
+.member-name{
+    font-size: 24px;
+    font-weight: 600;
+    position: relative;
+    margin-bottom: 2rem;
+    color: #202020;
+}
+
+.member-name::after{
+    content: "";
+    background-color: #202020;
+    height: 4px;
+    width: 100px;
+    top: 150%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-bottom: 2rem;
+}
+
+.member-description{
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+}
+
+.button{
+    text-decoration: none;
+    color: white;
+    background-color: #202020;
+    font-weight: 600;
+    padding: 13px 20px;
+    margin-top: 1rem;
+}
+
+.socials-container{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 40px;
+    width: 100%;
+    background-color: #202020;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.icon{
+    height: 60%;
+    cursor: pointer;
+}
+
+/* VIAJES */
+
+#viajes {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 8%;
+}
+
+#viajes .title {
+    font-size: 4rem;
+    font-weight: 800;
+    font-family: 'Mona Sans';
+    margin-top: 165px;
+}
+
+.title{
+    margin: 4rem 0 2rem 0;
+}
+
+.product-grid-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+
+.vuelo{
+    width: 23%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 5rem;
+}
+
+#product-image-wrapper{
+    height: 250px;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+#product-image-wrapper{
+    width: 100%;
+}
+
+.product-image:hover{
+    opacity: 0.6;
+    transform: scale(1.1);
+}
+
+.product-info-container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.product-seller{
+    text-transform: uppercase;
+    font-size: 12px;
+    color:#999;
+}
+
+.product-title{
+    font-size: 20px;
+    margin: 5px 0;
+    font-weight: 500;
+}
+
+.product-price{
+    color: #121212;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.add-to-cart-button {
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.add-to-cart-button:hover {
+    background-color: #45a049;
+}
+
+
+/* FAQ */
+
+.sectionFaq {
+    min-height: 100vh;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-size: 4rem;
+    margin: 2rem 0rem;
+    margin-top: 4.5rem;
+}
+
+.faq {
+    max-width: 700px;
+    margin-top: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #121212;
+    cursor: pointer;
+}
+
+.question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.question h3 {
+    font-size: 1.8rem;
+}
+
+.answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s ease;
+}
+
+.answer p {
+    padding-top: 1rem;
+    line-height: 1.6;
+    font-size: 1.4rem;
+}
+
+.faq.active .answer {
+    max-height: 300px;
+}
+
+
+/* FOOTER */
+
+footer{
+    width: 100%;
+    text-decoration: none;
+    background: linear-gradient(rgba(5, 7, 12, 0.75), rgba(5, 7, 12, 0.75)),
+    url(/assets/cancun02.jpg);
+}
+
+.container__footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.box__footer{
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+}
+
+.box__footer h2{
+    margin-bottom: 15px;
+    color: white;
+    font-weight: 700;
+}
+
+.box__footer a{
+    margin-top: 10px;
+    color: white;
+    font-weight: 600;
+}
+
+.box__footer a:hover{
+    opacity: 0.8;
+}
+
+.box__footer a .fab{
+    font-size: 20px;
+}
+
+.box__copyright{
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    padding: 20px 40px;
+}
+
+.box__copyright p{
+    margin-top: 20px;
+    color: white;
+}
+
+.box__copyright hr{
+    border: none;
+    height: 1px;
+    background-color: white;
+}
+
+
+/* CONTACTO */
+
+.tag {
+    text-align: center;
+    font-size: 4rem;
+    margin-top: -100px;
+}
+
+form {
+    max-inline-size: 550px;
+    margin: auto;
+}
+  
+.form label {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: .5em;
+    padding-inline-start: .5em;
+}
+  
+.form label span {
+    color: #DA1414;
+}
+  
+.form input, .form textarea {
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 1rem;
+    padding: .8em;
+    border-radius: .5em;
+    border: 1px solid #858C94;
+}
+.form textarea {
+    margin-block-end: 2em;
+    font-family: inherit;
+}
+  
+input::-webkit-input-placeholder {
+    color: #0F0A0A88;
+}
+  
+  
+.contact {
+    margin-block-end: 5em;
+}
+
+#mail-ocultar {
+    opacity: 0;
+}
