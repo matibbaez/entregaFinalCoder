@@ -4,13 +4,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans+Caption&display=swap');
 @import url('https://fonts.cdnfonts.com/css/mona-sans?styles=144351');
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;700&display=swap');
 
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Mona Sans';
+    font-family: 'Be Vietnam Pro', sans-serif;
     scroll-behavior: smooth;
 }
 
@@ -97,7 +98,7 @@
 .our-team-intro h2 {
     margin-top: 170px;
     font-size: 4rem;
-    font-family: 'Mona Sans';
+    font-family: 'Be Vietnam Pro', sans-serif;
     font-weight: bold;
 }
 
@@ -105,7 +106,7 @@
     margin-top: 15px;
     font-size: 1.25rem;
     text-align: center;
-    font-family: 'Mona Sans';
+    font-family: 'Be Vietnam Pro', sans-serif;
 }
 
 .our-team-section{
@@ -117,7 +118,7 @@
     align-items: center;
     flex-wrap: wrap;
     margin-top: 120px;
-    font-family: 'Mona Sans'
+    font-family: 'Be Vietnam Pro', sans-serif;
 }
 
 .member-container{
@@ -165,7 +166,7 @@
     background-image: url(/assets/Perfil1.png);
 }
 .member-container:nth-of-type(2)::after{
-    background-image: url(/assets/IMG_9234.jpg);
+    background-image: url(/assets/mati.jpg);
 }
 .member-container:nth-of-type(3)::after{
     background-image: url(/assets/Perfil3.png);
@@ -239,7 +240,7 @@
 #viajes .title {
     font-size: 4rem;
     font-weight: 800;
-    font-family: 'Mona Sans';
+    font-family: 'Be Vietnam Pro', sans-serif;
     margin-top: 165px;
 }
 

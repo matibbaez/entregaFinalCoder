@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
 @import url('https://fonts.cdnfonts.com/css/mona-sans?styles=144351');
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;700&display=swap');
 
 
 :root {
@@ -17,7 +18,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Mona Sans';
+    font-family: 'Be Vietnam Pro', sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6, p, a, input, textarea, ul {
@@ -55,7 +56,7 @@ aside {
 .logo {
     font-weight: 800;
     font-size: 2.25rem;
-    font-family: 'Mona Sans';
+    font-family: 'Be Vietnam Pro', sans-serif;
 }
 
 .menu {
@@ -147,7 +148,7 @@ main {
 .titulo-principal {
     color: black;
     margin-bottom: 2rem;
-    font-family: 'Mona Sans';
+    font-family: 'Be Vietnam Pro', sans-serif;
     font-size: 2.15rem;
     font-weight: 800;
 }
