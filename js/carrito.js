@@ -85,9 +85,9 @@ function eliminarDelCarrito (e) {
         text: "Vuelo eliminado",
         duration: 3000,
         close: true,
-        gravity: "top", // `top` or `bottom`
-        position: "right", // `left`, `center` or `right`
-        stopOnFocus: true, // Prevents dismissing of toast on hover
+        gravity: "top", 
+        position: "right", 
+        stopOnFocus: true, 
         style: {
           background: "linear-gradient(to right, #3a70d1, #33a1b8, #45fce8)",
           borderRadius: "1.25rem"
@@ -96,7 +96,7 @@ function eliminarDelCarrito (e) {
             x: "1.25rem",
             y: "1.5rem"
         },
-        onClick: function(){} // Callback after click
+        onClick: function(){} 
     }).showToast();
 
     let idBoton = e.currentTarget.id;

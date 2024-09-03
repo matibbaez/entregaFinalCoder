@@ -18,7 +18,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Be Vietnam Pro', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6, p, a, input, textarea, ul {
@@ -56,7 +56,7 @@ aside {
 .logo {
     font-weight: 800;
     font-size: 2.25rem;
-    font-family: 'Be Vietnam Pro', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .menu {
@@ -148,7 +148,7 @@ main {
 .titulo-principal {
     color: black;
     margin-bottom: 2rem;
-    font-family: 'Be Vietnam Pro', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 2.15rem;
     font-weight: 800;
 }
