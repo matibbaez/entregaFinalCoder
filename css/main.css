@@ -15,6 +15,11 @@
     scroll-behavior: smooth;
 }
 
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #3a70d1 #ffffff;
+  }
+
 .wrapped .logo {
     font-family: 'Poppins', sans-serif;
 }
@@ -31,13 +36,23 @@
     width: 100%;
 }
 
-.inicio nav ul li{
+.inicio nav ul li {
     list-style: none;
     text-decoration: none;
     flex-wrap: wrap;
     display: inline;
     padding: 10px;
     font-size: 1.15rem;
+}
+
+.inicio nav ul li a {
+    color: #000; 
+    text-decoration: none; 
+    font-weight: 200; 
+}
+
+.inicio nav ul li a:hover {
+    color: #3a70d1; 
 }
 
 #intro-viajes {
@@ -67,7 +82,7 @@
     font-size: 1.25rem;
     padding-top: 5px;
     text-align: center;
-    font-weight: bold;
+    font-weight: 200;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -82,7 +97,6 @@
     padding: .15rem .3rem;
     border-radius: .20rem;
 }
-
 
 /* TEAM */
 
@@ -303,7 +317,7 @@
 
 .add-to-cart-button {
     padding: 8px 16px;
-    background-color: #4CAF50;
+    background-color: #3a70d1;
     color: white;
     border: none;
     border-radius: 4px;
@@ -313,7 +327,7 @@
 }
 
 .add-to-cart-button:hover {
-    background-color: #45a049;
+    background-color: #81a7ee;
 }
 
 
