@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
 @import url('https://fonts.cdnfonts.com/css/mona-sans?styles=144351');
 @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;700&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Poppins:400,500,600,700);
 
 
 :root {
@@ -54,8 +55,8 @@ aside {
 }
 
 .logo {
-    font-weight: 800;
-    font-size: 2.25rem;
+    font-weight: bold;
+    font-size: 2rem;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -150,7 +151,7 @@ main {
     margin-bottom: 2rem;
     font-family: 'Poppins', sans-serif;
     font-size: 2.15rem;
-    font-weight: 800;
+    font-weight: 700;
 }
 
 .contenedor-vuelos {

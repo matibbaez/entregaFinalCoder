@@ -32,9 +32,9 @@ function cargarVuelosCarrito () {
                     <small>Título</small>
                     <h3>${vuelo.titulo}</h3>
                 </div>
-                <div class="carrito-vuelo-pasajeros">
-                    <small>Pasajeros</small>
-                    <p>${vuelo.pasajeros}</p>
+                <div class="carrito-vuelo-cantidades">
+                    <small>Cantidades</small>
+                    <p>${vuelo.cantidades}</p>
                 </div>
                 <div class="carrito-vuelo-precio">
                     <small>Precio</small>
@@ -42,7 +42,7 @@ function cargarVuelosCarrito () {
                 </div>
                 <div class="carrito-vuelo-subtotal">
                     <small>Subtotal</small>
-                    <p>€${vuelo.precio * vuelo.pasajeros}</p>
+                    <p>€${vuelo.precio * vuelo.cantidades}</p>
                 </div>
                 <button class="carrito-vuelo-eliminar" id="${vuelo.id}"><i class="bi bi-trash-fill"></i></button>
     
@@ -117,7 +117,7 @@ function vaciarCarrito () {
     Swal.fire({
         title: '¿Estás seguro?',
         icon: 'question',
-        html: `Se van a eliminar ${vuelosEnCarrito.reduce((acc, vuelo) => acc + vuelo.pasajeros, 0)} vuelos.`,
+        html: `Se van a eliminar ${vuelosEnCarrito.reduce((acc, vuelo) => acc + vuelo.cantidades, 0)} vuelos.`,
         showCancelButton: true,
         focusConfirm: false,
         confirmButtonText:
@@ -137,7 +137,7 @@ function vaciarCarrito () {
 // Actualizar el total de vuelos
 
 function actualizarTotal () {
-    const totalCalculado = vuelosEnCarrito.reduce((acc, vuelo) => acc + (vuelo.precio * vuelo.pasajeros), 0);
+    const totalCalculado = vuelosEnCarrito.reduce((acc, vuelo) => acc + (vuelo.precio * vuelo.cantidades), 0);
     total.innerText = `€${totalCalculado}`;
 }
 
@@ -149,7 +149,7 @@ function comprarCarrito () {
     Swal.fire({
         title: 'Confirmar compra',
         icon: 'success',
-        html: `Comprarás ${vuelosEnCarrito.reduce((acc, vuelo) => acc + vuelo.pasajeros, 0)} vuelos.`,
+        html: `Comprarás ${vuelosEnCarrito.reduce((acc, vuelo) => acc + vuelo.cantidades, 0)} vuelos.`,
         showCancelButton: true,
         focusConfirm: false,
         confirmButtonText:

@@ -83,9 +83,9 @@ function agregarAlCarrito(e) {
 
     if(vuelosEnCarrito.some(vuelo => vuelo.id === idBoton)) {
         const index = vuelosEnCarrito.findIndex(vuelo => vuelo.id === idBoton);
-        vuelosEnCarrito[index].pasajeros++;
+        vuelosEnCarrito[index].cantidades++;
     } else {
-        vueloAgregado.pasajeros = 1;
+        vueloAgregado.cantidades = 1;
         vuelosEnCarrito.push(vueloAgregado);
     }
 
@@ -97,7 +97,7 @@ function agregarAlCarrito(e) {
 // Funcion para actualizar el número de productos
 
 function actualizarNumero() {
-    let numeroVuelo = vuelosEnCarrito.reduce((acc, vuelo) => acc + vuelo.pasajeros, 0);
+    let numeroVuelo = vuelosEnCarrito.reduce((acc, vuelo) => acc + vuelo.cantidades, 0);
     numeroCart.innerHTML = numeroVuelo;
 }
 
