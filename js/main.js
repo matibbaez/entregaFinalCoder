@@ -19,15 +19,14 @@ function cargarVuelos() {
 
         const div = document.createElement("div");
         div.classList.add("vuelo");
-        div.innerHTML = `
-            <img id="product-image-wrapper" src="${vuelo.imagen}" alt="${vuelo.titulo}" class="product-image">
-            <div class="product-info-container">
-                <span class="product-seller">TUVIAJE.COM</span>
-                <h3 class="product-title">${vuelo.titulo}</h3>
-                <h3 class="product-price">€${vuelo.precio}</h3>
-                <button class="add-to-cart-button" id="${vuelo.id}">Agregar al carrito</button>
-            </div>
-        `
+        div.innerHTML = `<img id="product-image-wrapper" src="${vuelo.imagen}" alt="${vuelo.titulo}" class="product-image">
+                  <div class="product-info-container">
+                      <span class="product-seller">TUVIAJE.COM</span>
+                      <h3 class="product-title">${vuelo.titulo}</h3>
+                      <h3 class="product-price">€${vuelo.precio}</h3>
+                      <button class="add-to-cart-button" id="${vuelo.id}">Agregar al carrito</button>
+                  </div>`;
+
 
         contenedorVuelos.append(div);
     })

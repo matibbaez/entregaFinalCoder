@@ -26,27 +26,24 @@ function cargarVuelosCarrito () {
         vuelosEnCarrito.forEach(vuelo => {
             const div = document.createElement("div");
             div.classList.add("carrito-vuelo");
-            div.innerHTML = `
-                <img class="carrito-vuelo-imagen" src="${vuelo.imagen}" alt="${vuelo.titulo}">
-                <div class="carrito-vuelo-titulo">
-                    <small>Título</small>
-                    <h3>${vuelo.titulo}</h3>
-                </div>
-                <div class="carrito-vuelo-cantidades">
-                    <small>Cantidades</small>
-                    <p>${vuelo.cantidades}</p>
-                </div>
-                <div class="carrito-vuelo-precio">
-                    <small>Precio</small>
-                    <p>€${vuelo.precio}</p>
-                </div>
-                <div class="carrito-vuelo-subtotal">
-                    <small>Subtotal</small>
-                    <p>€${vuelo.precio * vuelo.cantidades}</p>
-                </div>
-                <button class="carrito-vuelo-eliminar" id="${vuelo.id}"><i class="bi bi-trash-fill"></i></button>
-    
-            `;
+            div.innerHTML = `<img class="carrito-vuelo-imagen" src="${vuelo.imagen}" alt="${vuelo.titulo}">
+                 <div class="carrito-vuelo-titulo">
+                     <small>Título</small>
+                     <h3>${vuelo.titulo}</h3>
+                 </div>
+                 <div class="carrito-vuelo-cantidades">
+                     <small>Cantidades</small>
+                     <p>${vuelo.cantidades}</p>
+                 </div>
+                 <div class="carrito-vuelo-precio">
+                     <small>Precio</small>
+                     <p>€${vuelo.precio}</p>
+                 </div>
+                 <div class="carrito-vuelo-subtotal">
+                     <small>Subtotal</small>
+                     <p>€${vuelo.precio * vuelo.cantidades}</p>
+                 </div>
+                 <button class="carrito-vuelo-eliminar" id="${vuelo.id}"><i class="bi bi-trash-fill"></i></button>`;
     
             contenedorCarritoVuelos.append(div);
     
@@ -80,7 +77,7 @@ function actualizarBotonesEliminar () {
 
 // Eliminar del carrito
 
-function eliminarDelCarrito (e) {
+function eliminarDelCarrito(e) {
     Toastify({
         text: "Vuelo eliminado",
         duration: 3000,
@@ -100,12 +97,18 @@ function eliminarDelCarrito (e) {
     }).showToast();
 
     let idBoton = e.currentTarget.id;
-    const index = vuelosEnCarrito.findIndex(vuelo => vuelo.id === idBoton);
+    const vuelo = vuelosEnCarrito.find(vuelo => vuelo.id === idBoton);
 
-    vuelosEnCarrito.splice(index, 1);
-    cargarVuelosCarrito();
+    if (vuelo) {
+        if (vuelo.cantidades > 1) {
+            vuelo.cantidades--;
+        } else {
+            vuelosEnCarrito = vuelosEnCarrito.filter(vuelo => vuelo.id !== idBoton);
+        }
 
-    localStorage.setItem("vuelos-en-carrito", JSON.stringify(vuelosEnCarrito));
+        cargarVuelosCarrito();
+        localStorage.setItem("vuelos-en-carrito", JSON.stringify(vuelosEnCarrito));
+    }
 }
 
 botonVaciar.addEventListener("click", vaciarCarrito);
